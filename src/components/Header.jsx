@@ -1,6 +1,6 @@
 import reactImg from "../assets/react-core-concepts.png";
 
-export function Header() {
+export default function Header() {
     return (
         <header>
             <img src={reactImg} alt="Stylized atom" />
