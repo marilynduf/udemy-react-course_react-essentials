@@ -6,11 +6,11 @@ import { CORE_CONCEPTS } from "../data.js";
 import { EXAMPLES } from "../data.js";
 
 function App() {
+    // console.log("App COMPONENT RENDERED");
     const [selectedTopic, setSelectedTopic] = useState();
     let tabsArrray = ["components", "jsx", "props", "state"];
     function handleSelect(selectedButton) {
         setSelectedTopic(selectedButton);
-        console.log(selectedButton);
     }
 
     return (
@@ -29,16 +29,28 @@ function App() {
                 <section id="examples">
                     <h2>Examples</h2>
                     <menu>
-                        <TabButton onSelect={() => handleSelect(tabsArrray[0])}>
+                        <TabButton
+                            isSelected={selectedTopic === tabsArrray[0]}
+                            onSelect={() => handleSelect(tabsArrray[0])}
+                        >
                             {tabsArrray[0]}
                         </TabButton>
-                        <TabButton onSelect={() => handleSelect(tabsArrray[1])}>
+                        <TabButton
+                            isSelected={selectedTopic === tabsArrray[1]}
+                            onSelect={() => handleSelect(tabsArrray[1])}
+                        >
                             {tabsArrray[1]}
                         </TabButton>
-                        <TabButton onSelect={() => handleSelect(tabsArrray[2])}>
+                        <TabButton
+                            isSelected={selectedTopic === tabsArrray[2]}
+                            onSelect={() => handleSelect(tabsArrray[2])}
+                        >
                             {tabsArrray[2]}
                         </TabButton>
-                        <TabButton onSelect={() => handleSelect(tabsArrray[3])}>
+                        <TabButton
+                            isSelected={selectedTopic === tabsArrray[3]}
+                            onSelect={() => handleSelect(tabsArrray[3])}
+                        >
                             {tabsArrray[3]}
                         </TabButton>
                     </menu>
