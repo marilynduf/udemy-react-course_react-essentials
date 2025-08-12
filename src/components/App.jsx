@@ -1,5 +1,6 @@
 import Header from "./Header/Header.jsx";
 import TabButton from "./TabButton.jsx";
+// import { Fragment } from "react";
 import { useState } from "react";
 import CoreConcept from "./CoreConcept.jsx";
 import { CORE_CONCEPTS } from "../data.js";
@@ -14,7 +15,7 @@ function App() {
     }
 
     return (
-        <div>
+        <>
             <Header />
             <section id="core-concepts">
                 <ul>
@@ -67,7 +68,7 @@ function App() {
                     )}
                 </section>
             </main>
-        </div>
+        </>
     );
 }
 
