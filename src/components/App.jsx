@@ -7,9 +7,8 @@ function App() {
     return (
         <>
             <Header />
-            <CoreConcepts />
             <main>
-                <h2>Time to get started!</h2>
+                <CoreConcepts />
                 <Examples />
             </main>
         </>
