@@ -1,5 +1,6 @@
-export default function TabButton({ children, onSelect, isSelected }) {
+export default function TabButton({ children, onSelect, isSelected, props }) {
     // console.log("TabButton COMPONENT RENDERED");
+    console.log(props);
     return (
         <li>
             <button

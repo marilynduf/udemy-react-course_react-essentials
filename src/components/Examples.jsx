@@ -1,4 +1,5 @@
 import TabButton from "./TabButton";
+import Section from "./Section.jsx";
 import { EXAMPLES } from "../data.js";
 import { useState } from "react";
 
@@ -9,33 +10,16 @@ export default function Examples() {
         setSelectedTopic(selectedButton);
     }
     return (
-        <section id="examples">
-            <h2>Examples</h2>
+        <Section title="Examples" id="examples">
             <menu>
-                <TabButton
-                    isSelected={selectedTopic === tabsArrray[0]}
-                    onSelect={() => handleSelect(tabsArrray[0])}
-                >
-                    {tabsArrray[0]}
-                </TabButton>
-                <TabButton
-                    isSelected={selectedTopic === tabsArrray[1]}
-                    onSelect={() => handleSelect(tabsArrray[1])}
-                >
-                    {tabsArrray[1]}
-                </TabButton>
-                <TabButton
-                    isSelected={selectedTopic === tabsArrray[2]}
-                    onSelect={() => handleSelect(tabsArrray[2])}
-                >
-                    {tabsArrray[2]}
-                </TabButton>
-                <TabButton
-                    isSelected={selectedTopic === tabsArrray[3]}
-                    onSelect={() => handleSelect(tabsArrray[3])}
-                >
-                    {tabsArrray[3]}
-                </TabButton>
+                {tabsArrray.map((tabsArrray) => (
+                    <TabButton
+                        isSelected={selectedTopic === tabsArrray}
+                        onSelect={() => handleSelect(tabsArrray)}
+                    >
+                        {tabsArrray}
+                    </TabButton>
+                ))}
             </menu>
 
             {!selectedTopic ? (
@@ -49,6 +33,6 @@ export default function Examples() {
                     </pre>
                 </div>
             )}
-        </section>
+        </Section>
     );
 }
