@@ -15,7 +15,7 @@ export default function Examples() {
                 {tabsArrray.map((tabsArrray) => (
                     <TabButton
                         isSelected={selectedTopic === tabsArrray}
-                        onSelect={() => handleSelect(tabsArrray)}
+                        onClick={() => handleSelect(tabsArrray)}
                     >
                         {tabsArrray}
                     </TabButton>
